@@ -21,9 +21,9 @@ namespace eval ttk::theme::azure {
     # I took this function from the arc theme of the Sergei Golovan.
     proc LoadImages {imgdir} {
         variable I
-        foreach file [glob -directory $imgdir *.png] {
+        foreach file [glob -directory $imgdir *.gif] {
             set img [file tail [file rootname $file]]
-            set I($img) [image create photo -file $file -format png]
+            set I($img) [image create photo -file $file -format gif]
         }
     }
 
